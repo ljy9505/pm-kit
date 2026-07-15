@@ -1,0 +1,9 @@
+# 채운 domain-context 는 회사 내부 정책 → 절대 커밋 금지 (템플릿만 공유)
+domain-context.md
+context/domain-context.md
+**/domain-context.md
+
+# OS/에디터 잡파일
+.DS_Store
+Thumbs.db
+*.swp
