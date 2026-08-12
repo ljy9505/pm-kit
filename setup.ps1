@@ -1,4 +1,4 @@
-# pm-kit 부팅 (Windows / PowerShell)
+﻿# pm-kit 부팅 (Windows / PowerShell)
 # 사용: 새 회사 프로젝트 폴더에서  ->  powershell -ExecutionPolicy Bypass -File <kit>\setup.ps1 [-Target <프로젝트경로>]
 # 하는 일: 엔진 파일을 대상 프로젝트의 .claude/ 에 깔고, 기존 실제 값은 절대 덮지 않는다.
 
