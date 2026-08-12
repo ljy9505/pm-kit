@@ -11,10 +11,13 @@ echo
 
 mkdir -p "$TARGET/.claude/agents" "$TARGET/.claude/context"
 
-# 엔진 (항상 갱신 OK — 회사무관)
-cp -f "$KIT/agents/planning-reviewer.md" "$TARGET/.claude/agents/"
-cp -f "$KIT/context/planning-kickoff.md" "$TARGET/.claude/context/"
-echo "[OK] 엔진 복사: planning-reviewer, planning-kickoff"
+# 엔진 (항상 갱신 OK — 회사무관). TEMPLATE 은 아래에서 따로 다룬다.
+cp -f "$KIT"/agents/*.md "$TARGET/.claude/agents/"
+for f in "$KIT"/context/*.md; do
+  [ "$(basename "$f")" = "domain-context.TEMPLATE.md" ] && continue
+  cp -f "$f" "$TARGET/.claude/context/"
+done
+echo "[OK] 엔진 복사: agents/*, context/* (kickoff·ux-checklist·prediction-eval 등)"
 
 # domain-context: 실제 값이 있으면 절대 덮지 않는다 (회사 정책 보호)
 dc="$TARGET/.claude/context/domain-context.md"

@@ -10,10 +10,11 @@ Write-Host "대상 : $Target`n"
 
 New-Item -ItemType Directory -Force -Path "$Target\.claude\agents","$Target\.claude\context" | Out-Null
 
-# 엔진 (항상 최신으로 갱신 OK — 회사무관)
-Copy-Item "$Kit\agents\planning-reviewer.md"      "$Target\.claude\agents\"  -Force
-Copy-Item "$Kit\context\planning-kickoff.md"      "$Target\.claude\context\" -Force
-Write-Host "[OK] 엔진 복사: planning-reviewer, planning-kickoff"
+# 엔진 (항상 최신으로 갱신 OK — 회사무관). TEMPLATE 은 아래에서 따로 다룬다.
+Copy-Item "$Kit\agents\*.md" "$Target\.claude\agents\" -Force
+Get-ChildItem "$Kit\context\*.md" -Exclude "domain-context.TEMPLATE.md" |
+  Copy-Item -Destination "$Target\.claude\context\" -Force
+Write-Host "[OK] 엔진 복사: agents\*, context\* (kickoff·ux-checklist·prediction-eval 등)"
 
 # domain-context: 실제 값이 이미 있으면 절대 덮지 않는다 (회사 정책 보호)
 $dc = "$Target\.claude\context\domain-context.md"

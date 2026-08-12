@@ -11,6 +11,8 @@ pm-kit/
 ├── agents/planning-reviewer.md      기획서 적대적 검토 에이전트 (엔진)
 ├── context/
 │   ├── planning-kickoff.md          작성 전 역질문 + 권한 CRUD 매트릭스 (엔진)
+│   ├── ux-checklist.md              화면 상태 그물: 로딩·빈상태·중복·폼·접근성 (엔진)
+│   ├── prediction-eval.md           예측 일지 + Eval 세트: 넘기기 직전 채점 장치 (엔진)
 │   └── domain-context.TEMPLATE.md   회사별 값 빈 골격 (실제 값은 여기 X)
 ├── setup.ps1 / setup.sh             새 프로젝트에 엔진 배치
 └── skills/                          내 커스텀 스킬(선택) — 필요 시 여기 모음
