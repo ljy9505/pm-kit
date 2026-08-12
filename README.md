@@ -8,7 +8,9 @@
 ```
 pm-kit/
 ├── CLAUDE.md                        엔진: 역할·워크플로우·UX 규칙·문서 규칙 (회사무관)
-├── agents/planning-reviewer.md      기획서 적대적 검토 에이전트 (엔진)
+├── agents/
+│   ├── planning-reviewer.md         기획서 적대적 검토 에이전트 — 개발 넘기기 전 (엔진)
+│   └── qa-engineer.md               브라우저 탐색적 QA 에이전트 — 개발 완료 후 (엔진)
 ├── context/
 │   ├── planning-kickoff.md          작성 전 역질문 + 권한 CRUD 매트릭스 (엔진)
 │   ├── ux-checklist.md              화면 상태 그물: 로딩·빈상태·중복·폼·접근성 (엔진)
