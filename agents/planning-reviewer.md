@@ -17,7 +17,7 @@ model: opus
 1. `.claude/context/doc-standard.md` ← **회사 문서 표준**(경로·ID 체계·문서 소유자·완료 게이트). 없으면 대상 레포의 `docs/conventions.md`·`docs/process.md`·`README.md` 문서 지도.
 2. `.claude/context/domain-context.md`  ← 회사/도메인별 역할·상태·정책 (범용 진입점)
 3. 문서 표준을 쓰는 프로젝트라면 추가로:
-   `docs/{admin,service}/policy.md`, `docs/{admin,service}/feature-definition.md`, `docs/{admin,service}/screen-req/*.md`, `docs/glossary/*.md`, `docs/ownership.md`
+   `docs/{admin,service}/policy.md`, `docs/{admin,service}/feature-definition.md`, `docs/{admin,service}/screens/*.md`, `docs/glossary/*.md`, `docs/ownership.md`
    (표준이 다른 배치를 쓰면 그 배치를 따른다 — 경로를 가정하지 말고 §0-1에서 읽은 문서 지도를 쓴다)
 4. 위 어느 것도 없으면, 검토 시작 전에 사용자에게 물어라:
    "이 서비스의 역할(권한 등급)과 핵심 상태값이 정의된 파일이 있나요?

@@ -3,6 +3,20 @@
 어느 PC·어느 회사에서든 **한 번에** 내 기획 방식을 세팅하는 개인 kit.
 핵심 설계: **엔진(회사무관) / 도메인(회사별) 분리** — 회사가 바뀌면 `domain-context.md`만 갈아끼운다.
 
+## 파이프라인 (2026-10 개편)
+
+뼈대는 [mattpocock/skills](https://github.com/mattpocock/skills), 기획자 그물은 `context/planning-nets.md`.
+
+```
+/grill-with-docs → 회사 표준 문서(+ /prototype 동시 · 실제 코드+DS · impeccable로 다듬기) → planning-reviewer
+  → /to-spec → /to-tickets → /implement → qa-engineer(브라우저) → /retro
+```
+
+- **한 명령으로**: `/pm-flow <기능 이름>` — 8단계를 순서대로, 단계마다 승인, 끊기면 이어하기.
+- 정본은 회사 표준 문서. `/to-spec`은 그걸 요약한 개발 전달용 이슈(Notion).
+- code-review는 화면 QA가 아니다. 브라우저 QA(`qa-engineer`)는 그대로 돈다.
+- 용어: 제품 고유 = 제품 레포 용어집(회사 표준 용어 문서 우선, 없으면 `GLOSSARY.md`) / 회사 공통 = `domain-context.md`.
+
 ## 구성
 
 ```
@@ -12,10 +26,14 @@ pm-kit/
 │   ├── planning-reviewer.md         기획서 적대적 검토 에이전트 — 개발 넘기기 전 (엔진)
 │   └── qa-engineer.md               브라우저 탐색적 QA 에이전트 — 개발 완료 후 (엔진)
 ├── context/
+│   ├── planning-nets.md             파이프라인 단계별 기획 그물: 6분류·CRUD·반출·운영 축·UX 2~3안 (엔진)
 │   ├── planning-kickoff.md          작성 전 역질문 + 권한 CRUD 매트릭스 (엔진)
 │   ├── ux-checklist.md              화면 상태 그물: 로딩·빈상태·중복·폼·접근성 (엔진)
+│   ├── prototype-craft.md           프로토타입 완성도 그물: 화면 «모드»·AI 슬롭 금지·사전점검 (엔진)
 │   ├── prediction-eval.md           예측 일지 + Eval 세트: 넘기기 직전 채점 장치 (엔진)
 │   └── domain-context.TEMPLATE.md   회사별 값 빈 골격 (실제 값은 여기 X)
+├── commands/pm-flow.md              /pm-flow: 파이프라인 8단계 진행자 (.claude/commands/로 복사됨)
+├── templates/issue-tracker-notion.md  to-spec·to-tickets용 Notion 트래커 설정 (docs/agents/로 복사됨)
 ├── setup.ps1 / setup.sh             새 프로젝트에 엔진 배치
 └── skills/                          내 커스텀 스킬(선택) — 필요 시 여기 모음
 ```
