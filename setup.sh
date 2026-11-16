@@ -21,7 +21,7 @@ echo "[OK] 엔진 복사: agents/*, context/* (kickoff·ux-checklist·prediction
 
 mkdir -p "$TARGET/.claude/commands"
 cp -f "$KIT"/commands/*.md "$TARGET/.claude/commands/"
-echo "[OK] 명령어 복사: /pm-flow (파이프라인 한 번에 진행)"
+echo "[OK] 명령어 복사: /pm-flow (파이프라인 한 번에 진행), /planning (기획 문서 작성)"
 
 # domain-context: 실제 값이 있으면 절대 덮지 않는다 (회사 정책 보호)
 dc="$TARGET/.claude/context/domain-context.md"

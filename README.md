@@ -33,6 +33,7 @@ pm-kit/
 │   ├── prediction-eval.md           예측 일지 + Eval 세트: 넘기기 직전 채점 장치 (엔진)
 │   └── domain-context.TEMPLATE.md   회사별 값 빈 골격 (실제 값은 여기 X)
 ├── commands/pm-flow.md              /pm-flow: 파이프라인 8단계 진행자 (.claude/commands/로 복사됨)
+├── commands/planning.md             /planning: 2단계 기획 문서 작성 절차 (회사 양식 우선, 없으면 기본 3종)
 ├── templates/issue-tracker-notion.md  to-spec·to-tickets용 Notion 트래커 설정 (docs/agents/로 복사됨)
 ├── setup.ps1 / setup.sh             새 프로젝트에 엔진 배치
 └── skills/                          내 커스텀 스킬(선택) — 필요 시 여기 모음

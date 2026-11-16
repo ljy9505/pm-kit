@@ -58,7 +58,7 @@ find "$HOME/.claude/plugins" "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/plugins" -path
 |---|---|---|---|
 | 0 | 원자료(인터뷰 녹취·VOC·문의·경쟁사 자료)를 **1건당 Agent `general-purpose` 1개**로 동시에 읽힌다 → 결과를 합쳐 `.scratch/<slug>/discovery.md`에 기회 표로 정리 (아래 "0 발굴 규칙") | `pm-product-discovery` 스킬(있으면) | 모든 주장에 원문 인용·출처 · 기회별 등장 건수 · PM이 다룰 기회 선택 |
 | 1 | Skill `mattpocock-skills:grilling` + `mattpocock-skills:domain-modeling` (= `/grill-with-docs`) | nets §1, `planning-kickoff.md` | 역질문 답 받음 · 전제마다 확인됨/추정/모름 · 어드민 범위 확정 · 용어가 `GLOSSARY.md`에 들어감 |
-| 2 | `/planning` 절차 STEP A·B·C로 회사 표준 정책서 → 기능 정의서 → 화면 설계서 (`~/.claude/commands/planning.md`를 읽고 따름. A0·A+는 1단계에서 끝났으면 건너뜀). **정책서를 끝내면 기능 정의서로 넘어가기 전에** Agent `planning-reviewer`를 정책서 계층만 보게 한 번 돌린다(중간 검토) | nets §2, `ux-checklist.md` | 회사 표준 양식·경로 준수 · 예외 3단 작성 · 중간 검토 `[HIGH]` 0 |
+| 2 | `/planning` 절차 STEP A·B·C로 회사 표준 정책서 → 기능 정의서 → 화면 설계서 (`.claude/commands/planning.md`를 읽고 따름 — 없으면 pm-kit 원본 `commands/planning.md`. A0·A+는 1단계에서 끝났으면 건너뜀). **정책서를 끝내면 기능 정의서로 넘어가기 전에** Agent `planning-reviewer`를 정책서 계층만 보게 한 번 돌린다(중간 검토) | nets §2, `ux-checklist.md` | 회사 표준 양식·경로 준수 · 예외 3단 작성 · 중간 검토 `[HIGH]` 0 |
 | 3 | Skill `mattpocock-skills:prototype` (2단계와 번갈아) → `impeccable`로 다듬기 | nets §3, `prototype-craft.md` | 실제 코드·DS 사용 · 0/1건 상태 있음 · 세 화면 폭 스크린샷 · PM이 안 선택 |
 | 4 | Agent `planning-reviewer` | nets §2 | 권한×CRUD 빈칸 0 · 반출 정의됨 · 운영 축 미정의 0 · `[HIGH]` 0 |
 | 5 | to-spec → to-tickets (SKILL.md 읽고 따름) | nets §4, `prediction-eval.md` | 롤아웃·예측 일지 작성 · Notion에 올리기 전 목록 승인 · 스펙에 정본 경로·기능 ID |
