@@ -8,8 +8,8 @@ argument-hint: <기능 이름 또는 한 줄 설명>
 당신은 이 파이프라인의 **진행자**다. `CLAUDE.md`의 파이프라인 표와 `.claude/context/planning-nets.md`가 정본이고, 이 명령은 그걸 순서대로 실행하는 방법만 정한다.
 
 > **레포에 엔진 파일이 없을 때** (pm-kit을 설치하지 않은 레포에서 전역 명령으로 실행한 경우):
-> - 파이프라인 표·`planning-nets.md`·`planning-kickoff.md`·`ux-checklist.md`·`prototype-craft.md`·`prediction-eval.md`는 원본 `~/Desktop/Project/pm-kit/`(`CLAUDE.md`, `context/`)에서 읽는다.
-> - `domain-context.md`(회사별 값)는 원본에서 대신 읽지 않는다. 없으면 PM에게 "이 레포에 `domain-context.md`가 없음 — `bash ~/Desktop/Project/pm-kit/setup.sh`로 설치 권장"이라고 한 번 알리고, 회사값이 필요한 판단은 PM에게 물어 진행한다.
+> - 파이프라인 표·`planning-nets.md`·`planning-kickoff.md`·`ux-checklist.md`·`prototype-craft.md`·`prediction-eval.md`는 이 PC에 clone한 pm-kit 원본(`CLAUDE.md`, `context/`)에서 읽는다. 위치를 모르면 `find ~ -maxdepth 4 -type d -name pm-kit`로 찾거나 PM에게 묻는다.
+> - `domain-context.md`(회사별 값)는 원본에서 대신 읽지 않는다. 없으면 PM에게 "이 레포에 `domain-context.md`가 없음 — `bash <pm-kit 경로>/setup.sh .`로 설치 권장"이라고 한 번 알리고, 회사값이 필요한 판단은 PM에게 물어 진행한다.
 
 ## 0. 시작 — 어디서부터인지 찾는다
 

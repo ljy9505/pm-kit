@@ -42,7 +42,7 @@ pm-kit/
 
 ```bash
 # 1. kit 받기
-git clone <ljy9505/pm-kit private repo>
+git clone https://github.com/ljy9505/pm-kit.git
 
 # 2. 일할 회사 프로젝트 폴더에서 엔진 배치
 #    Windows:  powershell -ExecutionPolicy Bypass -File <kit>\setup.ps1
@@ -63,7 +63,7 @@ git clone <ljy9505/pm-kit private repo>
 ## 보안 규칙 (중요)
 
 - **`domain-context.md`(채운 실제 값)는 절대 커밋하지 않는다.** `.gitignore`가 막아둠. 공유되는 건 `.TEMPLATE.md`뿐.
-- kit 자체는 **private 레포**(ljy9505). push는 사용자가 직접.
+- kit 자체는 공개 레포다. 회사 고유 값·사내 경로·내부 링크는 kit에 넣지 않는다 — 전부 `domain-context.md`(커밋 금지)로.
 
 ## 메모리 → kit 승격 원칙
 
